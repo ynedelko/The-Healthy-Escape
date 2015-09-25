@@ -3,8 +3,7 @@
 <h3>Folks are asking:</h3><br>
 <ul>
   {{#each model as |question|}}
-     <li><h4>{{question.author}}</h4>
-      Q: {{question.question}}</li><br>
+    {{question-tile question=question}}
   {{/each}}
 </ul>
 
