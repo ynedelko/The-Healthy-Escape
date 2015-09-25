@@ -1,8 +1,10 @@
 <h2>Find healthy alternatives for unhealthy behaviors.</h2>
-
+<br>
+<h3>Folks are asking:</h3><br>
 <ul>
   {{#each model as |question|}}
-     <li>{{question.author}} asks: {{question.question}}</li>
+     <li><h4>{{question.author}}</h4>
+      Q: {{question.question}}</li><br>
   {{/each}}
 </ul>
 
