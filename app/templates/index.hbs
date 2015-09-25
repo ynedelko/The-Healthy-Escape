@@ -1,3 +1,9 @@
 <h2>Find healthy alternatives for unhealthy behaviors.</h2>
 
+<ul>
+  {{#each model as |question|}}
+     <li>{{question.author}} asks: {{question.question}}</li>
+  {{/each}}
+</ul>
+
 {{outlet}}

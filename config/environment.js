@@ -5,7 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'the-healthy-escape',
     environment: environment,
     contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
-    firebase: 'https://Ythe-healthy-escape.firebaseio.com/',
+    firebase: 'https://the-healthy-escape.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
