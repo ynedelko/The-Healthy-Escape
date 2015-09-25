@@ -1,7 +1,7 @@
 {
   "name": "the-healthy-escape",
   "version": "0.0.0",
-  "description": "Small description for the-healthy-escape goes here",
+  "description": "Help for finding healthy alternitives in un-healthy sistuations",
   "private": true,
   "directories": {
     "doc": "doc",
