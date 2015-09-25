@@ -1,9 +1,12 @@
 <h2>Find healthy alternatives for unhealthy behaviors.</h2>
 <br>
-<h3>Folks are asking:</h3><br>
+<h3>Folks are asking:</h3>
+<h4>Add to the discussion</h4>
+<!-- {{new-question saveQuestion="saveQuestion"}} -->
+<br>
 <ul>
   {{#each model as |question|}}
-    {{question-tile question=question}}
+    {{question-tile question=question destroyQuestion="destroyQuestion"}}
   {{/each}}
 </ul>
 

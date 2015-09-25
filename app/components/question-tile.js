@@ -8,6 +8,11 @@ export default Ember.Component.extend({
     },
     noteHide: function() {
       this.set('isNoteShowing', false)
+    },
+    delete(question) {
+      if (confirm('Confirm delete?')) {
+        this.sendAction('destroyQuestion', question);
+      }
     }
   }
 });
