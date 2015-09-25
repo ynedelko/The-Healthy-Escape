@@ -2,4 +2,9 @@
 
 <h4>{{question.author}}</h4>
  Q: {{question.question}}
+{{#if isNoteShowing}}
+  {{question.note}} <button class="btn btn-warning btn-xs" {{action 'noteHide'}}>less</button>
+{{else}}
+  <button class="btn btn-info btn-xs" {{action 'noteShow'}}>more</button>
+{{/if}}
 <br><br>
