@@ -1,0 +1,21 @@
+{{#if addNewAnswer}}
+  <h4>What do you recommend?</h4>
+    <div>
+      <form>
+        <div class="form-group">
+          <label for="author">Name: </label>
+          {{input value=author id="author"}}
+        </div>
+
+        <div class="form-group">
+          <label for="content">Answer: </label>
+          {{input value=content id="content"}}
+        </div>
+
+        <button class="btn btn-info btn-sm" {{action 'saveQAnswer'}}>Offer Answer</button>
+      </form>
+    </div>
+{{else}}
+  <button class="btn btn-info btn-lg" {{action 'answerFormShow'}}>Offer an answer</button>
+{{/if}}
+{{yield}}
