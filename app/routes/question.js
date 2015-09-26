@@ -27,8 +27,12 @@ model() {
 actions: {
   saveAnswer(params) {
     var newAnswer = this.store.createRecord('answer', params);
-    newQAnswer.save();
-    this.transitionTo('question');
+    var question = params.question;
+    question.get('answer').addObject(newAnswer);
+    newAnswer.save(). then(function() {
+      return question.save();
+    });
+    this.transitionTo('question', params.question);
   },
 }
 });
