@@ -1,0 +1,5 @@
+<h2>More information about {{model.author}}'s question:</h2>
+{{question-detail question=model}}
+{{update-question question=question update="update"}}
+<button class="btn btn-default btn-xs" {{action 'delete' question}}>delete</button>
+{{outlet}}

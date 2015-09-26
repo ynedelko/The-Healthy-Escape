@@ -1,7 +1,7 @@
 {{yield}}
 
 <h4>{{question.author}}</h4>
- Q: {{question.ask}}
+ Q: {{#link-to 'question' question.id}}{{question.ask}}{{/link-to}}
 {{#if isNoteShowing}}
   {{question.note}} <button class="btn btn-warning btn-xs" {{action 'noteHide'}}>less</button>
 {{else}}
@@ -9,5 +9,4 @@
 {{/if}}<br>
 {{update-question question=question update="update"}}
 <button class="btn btn-default btn-xs" {{action 'delete' question}}>delete</button>
-
 <br><br>
