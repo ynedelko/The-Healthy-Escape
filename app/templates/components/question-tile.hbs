@@ -1,7 +1,7 @@
 {{yield}}
 
 <h4>{{question.author}}</h4>
- Q: {{#link-to 'question' question.id}}{{question.ask}}{{/link-to}}
+Q: {{#link-to 'question' question.id}}{{question.ask}}{{/link-to}}
 {{#if isNoteShowing}}
   {{question.note}} <button class="btn btn-warning btn-xs" {{action 'noteHide'}}>less</button>
 {{else}}

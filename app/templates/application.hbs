@@ -6,6 +6,7 @@
         <ul class="nav navbar-nav">
           <li> {{#link-to 'index'}}Home{{/link-to}} </li>
           <li> {{#link-to 'about'}}About{{/link-to}} </li>
+          <li> {{#link-to 'code-of-conduct'}}Code of Conduct{{/link-to}} </li>
         </ul>
       </div>
     </div>
@@ -15,7 +16,7 @@
 <div class="container">
 {{outlet}}
 </div>
-
+<br>
 <footer>
-  <div class="container">Be kind, be supportive. Please abide by The Healthy Escape's code of conduct!</div>
+  <div class="container">Be kind, be supportive. Please abide by The Healthy Escape's {{#link-to 'code-of-conduct'}}code of conduct!{{/link-to}}</div>
 </footer>

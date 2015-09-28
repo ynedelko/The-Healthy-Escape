@@ -3,11 +3,11 @@
 <h4>{{question.note}}</h4>
 <br>
 <ul>
-  {{#each model.answers as |answer|}}
+  {{#each model as |answer|}}
     {{new-answer answer=answer}}
   {{/each}}
 </ul>
 <h3>Do you have an answer for {{question.author}}?</h3>
-{{new-answer saveAnswer="saveAnswer"}}
+{{new-answer saveAnswer="saveAnswer" question=model}}
 <br>
 {{yield}}
