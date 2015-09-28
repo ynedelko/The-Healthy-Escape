@@ -3,3 +3,10 @@
 <!-- {{update-question question=question update="update"}} -->
 <!-- <button class="btn btn-default btn-xs" {{action 'delete' question}}>delete</button>
 {{outlet}} -->
+<ul>
+  {{#each model as |answer|}}
+    {{new-answer answer=answer}}
+  {{/each}}
+</ul>
+<h3>Do you have an answer for {{question.author}}?</h3>
+{{new-answer saveAnswer="saveAnswer" question=model}}
