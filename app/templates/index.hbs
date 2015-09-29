@@ -6,9 +6,7 @@
 
 <ul>
   {{#each model.questions as |question|}}
-  <li>{{#link-to 'question' question}} {{question.ask}}</li>
+  <li>{{#link-to 'question' question}} {{question.ask}}{{/link-to}}</li>
     <!-- {{question-tile question=question update="update" destroyQuestion="destroyQuestion"}} -->
   {{/each}}
 </ul>
-
-{{outlet}}

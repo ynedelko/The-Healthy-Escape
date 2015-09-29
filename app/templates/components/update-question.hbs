@@ -16,11 +16,11 @@
           <label for="note">More/Note: </label>
           {{input value=note id="note" placeholder=question.note}}
         </div>
-          <button class="btn btn-info btn-sm" {{action 'update' question}}>Save changes</button>
+          <button class="btn btn-info btn-sm" {{action 'updateQuestion' question}}>Save changes</button>
       </form>
     </div>
 {{else}}
-    <button class="btn btn-default btn-xs" {{action 'updateQuestionForm'}}>update</button>
+    <button class="btn btn-default btn-xs" {{action 'updateQuestionForm'}}>Update</button>
 {{/if}}
 
 {{yield}}

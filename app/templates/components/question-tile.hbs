@@ -1,12 +1,21 @@
 {{yield}}
-
-<h4>{{question.author}}</h4>
-Q: {{#link-to 'question' question.id}}{{question.ask}}{{/link-to}}
+<h4>{{question.author}} asks:</h4>
+<h3>{{question.ask}}</h3>
 {{#if isNoteShowing}}
   {{question.note}} <button class="btn btn-warning btn-xs" {{action 'noteHide'}}>less</button>
 {{else}}
   <button class="btn btn-info btn-xs" {{action 'noteShow'}}>more</button>
 {{/if}}<br>
-{{update-question question=question update="update"}}
-<button class="btn btn-default btn-xs" {{action 'delete' question}}>delete</button>
-<br><br>
+<br>
+<h3> Answers to {{question.author}}'s question:</h3>
+<ul>
+  {{#each question.answers as |answer|}}
+    <li>{{#link-to 'answer' answer}}{{answer.author}} says:  {{answer.content}}{{/link-to}}</li>
+  {{/each}}
+</ul>
+<br>
+{{update-question question=question updateQuestion="updateQuestion"}}
+<button class="btn btn-default btn-xs" {{action 'destroyQuestion' question}}>delete</button>
+<br>
+{{new-answer answer=answer saveAnswer="saveAnswer"}}
+<br>

@@ -10,13 +10,16 @@ export default Ember.Component.extend({
     noteHide: function() {
       this.set('isNoteShowing', false)
     },
-    update(question, params) {
-      this.sendAction('update', question, params);
+    updateQuestion(question, params) {
+      this.sendAction('updateQuestion', question, params);
     },
-    delete(question) {
+    destroyQuestion(question) {
       if (confirm('Confirm delete?')) {
         this.sendAction('destroyQuestion', question);
       }
+    },
+    saveAnswer(question, params) {
+      this.sendAction('saveAnswer', city, params);
     }
   }
 });
