@@ -4,9 +4,8 @@
 {{new-question saveQuestion='saveQuestion'}}
 <br>
 
-<ul>
-  {{#each model.questions as |question|}}
-  <li>{{#link-to 'question' question}} {{question.ask}}{{/link-to}}</li>
-    <!-- {{question-tile question=question update="update" destroyQuestion="destroyQuestion"}} -->
+
+  {{#each model.questions as |question|}}<hr>
+  Q:{{#link-to 'question' question}} {{question.ask}}{{/link-to}}
   {{/each}}
-</ul>
+  <hr>
