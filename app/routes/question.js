@@ -4,20 +4,32 @@ export default Ember.Route.extend({
   model(params) {
     return this.store.findRecord('question', params.question_id);
   },
-//should this be the RSVP.hash?
-  model() {
-    return this.store.findAll('answer');
-  },
-
   actions: {
-    saveAnswer(params) {
-      var newAnswer = this.store.createRecord('answer', params);
-      var question = params.question;
-      question.get('answer').addObject(newAnswer);
-      newAnswer.save(). then(function() {
-        return question.save();
+    updateQuestion(question, params) {
+      Object.keys(params).forEach(function(key) {
+        if(params[key]!==undefined) {
+          city.set(key,params[key]);
+        }
       });
-      this.transitionTo('question', params.question_id);
+      question.save();
+      this.transitionTo('question', question);
     },
+    destroyQuestion(question) {
+      question.get('answers').then(function(answers) {
+        answers.forEach(function(answer) {
+          answer.destroyRecord();
+        });
+      });
+      question.destroyRecord();
+      this.transitionTo('index');
+    },
+    saveAnswer(question, params) {
+      var newAnswer = this.store.createRecord('answer', params);
+      newAnswer.save();
+      newAnswer.save().then(function(question) {
+        question.reload();
+      });
+      this.transitionTo('question', question);
+    }
   }
 });
