@@ -12,10 +12,9 @@
           {{input value=content id="content"}}
         </div>
 
-        <button class="btn btn-info btn-sm" {{action 'saveAnswer'}}>Offer Answer</button>
+        <button class="btn btn-info btn-sm" {{action 'saveAnswer' question}}>Offer Answer</button>
       </form>
     </div>
 {{else}}
-  <button class="btn btn-info btn-lg" {{action 'answerFormShow'}}>Offer an answer</button>
+  <button class="btn btn-info btn-lg" {{action 'answerFormShow'}}>Offer an answer for {{question.author}}</button>
 {{/if}}
-{{yield}}

@@ -14,9 +14,9 @@
 <h3> Answers to {{question.author}}'s question:</h3>
 <ul>
   {{#each question.answers as |answer|}}
-    <li>{{#link-to 'answer' answer}}{{answer.author}} says:  {{answer.content}}{{/link-to}}</li>
+    <li>{{answer.author}} says: {{answer.content}}</li>
   {{/each}}
 </ul>
 <br>
-{{new-answer answer=answer saveAnswer="saveAnswer"}}
+{{new-answer question=question saveAnswer="saveAnswer"}}
 <br>

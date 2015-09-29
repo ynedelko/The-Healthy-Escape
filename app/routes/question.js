@@ -8,7 +8,7 @@ export default Ember.Route.extend({
     updateQuestion(question, params) {
       Object.keys(params).forEach(function(key) {
         if(params[key]!==undefined) {
-          city.set(key,params[key]);
+          question.set(key,params[key]);
         }
       });
       question.save();
@@ -24,9 +24,9 @@ export default Ember.Route.extend({
       this.transitionTo('index');
     },
     saveAnswer(question, params) {
-      var newAnswer = this.store.createRecord('answer', params);
-      newAnswer.save();
-      newAnswer.save().then(function(question) {
+      var thisAnswer = this.store.createRecord('answer', params);
+      thisAnswer.save();
+      question.save().then(function(question) {
         question.reload();
       });
       this.transitionTo('question', question);
