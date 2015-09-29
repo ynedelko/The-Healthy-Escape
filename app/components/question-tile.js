@@ -19,7 +19,7 @@ export default Ember.Component.extend({
       }
     },
     saveAnswer(question, params) {
-      this.sendAction('saveAnswer', city, params);
+      this.sendAction('saveAnswer', question, params);
     }
   }
 });
