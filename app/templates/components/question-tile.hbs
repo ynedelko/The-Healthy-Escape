@@ -2,14 +2,12 @@
 <h2>{{question.author}} asks:</h2>
 <h3>{{question.ask}}</h3>
 {{#if isNoteShowing}}
-  <h3>{{question.note}} <button class="btn btn-warning btn-xs" {{action 'noteHide'}}>less</button></h3>
+  <h3>{{question.note}} <button class="btn btn-warning btn-xs" {{action 'noteHide'}}>Hide Notes</button></h3>
 {{else}}
-  <button class="btn btn-info btn-xs" {{action 'noteShow'}}>more</button>
+  <button class="btn btn-info btn-xs" {{action 'noteShow'}}>Show More Notes</button>
 {{/if}}<br>
 <br>
-{{update-question question=question updateQuestion="updateQuestion"}}
-<button class="btn btn-default btn-xs" {{action 'destroyQuestion' question}}>delete</button>
-<br>
+<p>{{update-question question=question updateQuestion="updateQuestion"}}</p>
 <br>
 <h3> Answers to {{question.author}}'s question:</h3>
 <ul>
@@ -21,4 +19,6 @@
 </ul>
 <br>
 {{new-answer question=question saveAnswer="saveAnswer"}}
+<br>
+<button class="btn btn-default btn-xs" {{action 'destroyQuestion' question}}>Delete Question and All Answers</button>
 <br>

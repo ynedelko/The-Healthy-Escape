@@ -1,7 +1,8 @@
-# The-healthy-escape
+# The-Healthy-Escape
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+By Yelena Nedelko 2015
+
+The Healthy Escape connects you to a community of individuals who want to help you stay healthy. Users can ask "The Healthy Escape" community for support on how to avoid unhealthy behaviors, and contribute answers to other users questions.
 
 ## Prerequisites
 
@@ -39,10 +40,6 @@ Make use of the many generators for code, try `ember help generate` for more det
 * `ember build` (development)
 * `ember build --environment production` (production)
 
-### Deploying
-
-Specify what it takes to deploy your app.
-
 ## Further Reading / Useful Links
 
 * [ember.js](http://emberjs.com/)
@@ -50,4 +47,3 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
