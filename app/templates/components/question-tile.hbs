@@ -14,7 +14,9 @@
 <h3> Answers to {{question.author}}'s question:</h3>
 <ul>
   {{#each question.answers as |answer|}}
-    <li>{{answer.author}} says: {{answer.content}}</li>
+    <li>
+      <h4>{{answer.author}} says: {{answer.content}} | {{format-date answer.date_added}}</h4>
+    </li>
   {{/each}}
 </ul>
 <br>

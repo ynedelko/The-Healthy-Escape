@@ -8,7 +8,7 @@ export default Ember.Component.extend({
       this.set('isNoteShowing', true);
     },
     noteHide: function() {
-      this.set('isNoteShowing', false)
+      this.set('isNoteShowing', false);
     },
     updateQuestion(question, params) {
       this.sendAction('updateQuestion', question, params);
